@@ -14,6 +14,10 @@ export const StyledBar = styled.div`
   }
   p {
     font-family: Georgia, "Times New Roman", Times, serif;
+    text-transform: capitalize;
+  }
+  .article-fetched {
+    padding: 1rem 4rem;
   }
   input,
   button {

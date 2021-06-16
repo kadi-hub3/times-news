@@ -3,15 +3,17 @@ import Headline from "../Headline/Headline";
 import { StyledBar } from "./SearchBar.styles";
 import { fetchSpecificArticles } from "../../API";
 import { FaSearch } from "react-icons/fa";
+import { title } from "process";
 
 const SearchBar = () => {
   const [articles, setArticles] = useState<any[]>([]);
-  const [query, setQuery] = useState<any>("");
+  const [query, setQuery] = useState<string>("");
 
   useEffect(() => {
     const getData = async () => {
       const response = await fetchSpecificArticles(query);
       setArticles(response);
+      console.log(response);
     };
     getData();
   }, [query]);
@@ -39,15 +41,15 @@ const SearchBar = () => {
           {articles &&
             articles.map((article, id) => {
               return (
-                <a href={article.url} target="_blank" rel="noreferrer" key={id}>
-                  <Headline
-                    title={article.title}
-                    author={article.author}
-                    description={article.abstract}
-                    image={article.image}
-                    authorImg={article.image}
-                    authorProfession="Reporter"
-                  />
+                <a
+                  href={article.url}
+                  className="article-fetched"
+                  target="_blank"
+                >
+                  <div>
+                    <h3>{article.title}</h3>
+                    <p>{article.abstract}</p>
+                  </div>
                 </a>
               );
             })}

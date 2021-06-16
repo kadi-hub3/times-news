@@ -13,4 +13,10 @@ export const StyledBar = styled.div`
       height: 28vh;
     }
   }
+
+  @media only screen and (max-width: 1024px){
+    .ET-bar{
+      display: none;
+    }
+  }
 `;

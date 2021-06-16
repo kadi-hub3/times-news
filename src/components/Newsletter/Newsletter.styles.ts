@@ -11,6 +11,7 @@ export const StyledNewsLetter = styled.div`
     height: 100vh;
     width: 100vw;
     background: rgba(0, 0, 0, 0.7);
+    z-index: 222;
 
     .modal-newsletter {
       width: 50vw;

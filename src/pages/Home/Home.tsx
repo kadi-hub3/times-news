@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Headline from "../../components/Headline/Headline";
 import TechSidebar from "../../components/TechBar/TechBar";
 import ETSidebar from "../../components/ETbar/ETbar";
+import Swiper from "../../components/SliderShow/SliderShow";
 import { fetchArticles } from "../../API";
 import { GlobalStyle } from "./Home.styles";
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
   return (
     <>
       <GlobalStyle />
+      <Swiper />
       <main className="app">
         <div className="sections">
           <section>
@@ -45,7 +47,13 @@ const Home = () => {
           <section>
             {articles.map((article, id) => {
               return (
-                <a href={article.url} target="_blank" rel="noreferrer" key={id}>
+                <a
+                  href={article.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={id}
+                  className="article"
+                >
                   <Headline
                     title={article.title}
                     author={article.author}

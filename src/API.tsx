@@ -27,14 +27,21 @@ export const fetchArticles = async (section: string) => {
 };
 
 export const fetchSpecificArticles = async (query: string) => {
-  const endpoint = `${url}/articlesearch.json?q=${query}&api-key=${key}`;
+  const endpoint = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=${key}`;
   try {
     const response = await fetch(endpoint);
     if (response.ok) {
       const jsonRes = await response.json();
-      const queryArticles = jsonRes.articles;
+      const queryArticles = jsonRes.response.docs;
       console.log(queryArticles);
-      return queryArticles;
+      return queryArticles.map((article: any) => {
+        return {
+          title: article.headline.main,
+          abstract: article.abstract,
+          image: article.multimedia[0].url,
+          url: article.web_url,
+        };
+      });
     }
     throw new Error("Requested Articles Not Found!");
   } catch (err) {

@@ -7,7 +7,7 @@ const Tech = () => {
 
   useEffect(() => {
     const getArticles = async () => {
-      const response = await fetchArticles("food");
+      const response = await fetchArticles("technology");
       setArticles(response);
     };
     getArticles();

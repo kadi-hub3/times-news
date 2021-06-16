@@ -36,4 +36,10 @@ export const StyledArticle = styled.div`
       }
     }
   }
+
+  @media only screen and (max-width: 1024px) {
+    .news-article {
+      width: 90vw;
+    }
+  }
 `;
