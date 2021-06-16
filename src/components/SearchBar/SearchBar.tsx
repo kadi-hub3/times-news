@@ -12,8 +12,8 @@ const SearchBar = () => {
   useEffect(() => {
     const getData = async () => {
       const response = await fetchSpecificArticles(query);
-      setArticles(response);
       console.log(response);
+      setArticles(response);
     };
     getData();
   }, [query]);

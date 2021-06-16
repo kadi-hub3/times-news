@@ -2,7 +2,7 @@
   "name": "news-times",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://kadi-hub3.github.io/times-news",
+  "homepage": "https://kadi-hub3.github.io/times-news",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
