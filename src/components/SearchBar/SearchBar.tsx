@@ -1,41 +1,40 @@
-import React, { useState, useEffect } from "react";
-import Headline from "../Headline/Headline";
+import React, { useState } from "react";
 import { StyledBar } from "./SearchBar.styles";
 import { fetchSpecificArticles } from "../../API";
 import { FaSearch } from "react-icons/fa";
-import { title } from "process";
 
 const SearchBar = () => {
   const [articles, setArticles] = useState<any[]>([]);
   const [query, setQuery] = useState<string>("");
 
-  useEffect(() => {
-    const getData = async () => {
-      const response = await fetchSpecificArticles(query);
-      console.log(response);
-      setArticles(response);
-    };
-    getData();
-  }, [query]);
+  const getData = async () => {
+    const response = await fetchSpecificArticles(query);
+    console.log(query);
+    console.log(response);
+    setArticles(response);
+  };
 
-  const handleChange = (e: any) => {
-    setQuery(e.target.value);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    if (e.target.value.length === 0) {
+      setArticles([]);
+    } else {
+      setQuery(e.target.value);
+    }
   };
 
   return (
     <StyledBar>
       <div>
         <div className="search-outer">
-          <form role="search" method="get" className="searchform">
-            <input
-              type="search"
-              onChange={handleChange}
-              placeholder="Type any keyword"
-            />
-            <button type="submit">
-              <FaSearch />
-            </button>
-          </form>
+          <input
+            type="search"
+            onChange={handleChange}
+            placeholder="Type any keyword"
+          />
+          <button onClick={getData} type="button">
+            <FaSearch />
+          </button>
         </div>
         <ul className="articles-fetched">
           {articles &&
@@ -45,6 +44,7 @@ const SearchBar = () => {
                   href={article.url}
                   className="article-fetched"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <div>
                     <h3>{article.title}</h3>

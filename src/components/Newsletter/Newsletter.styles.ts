@@ -22,14 +22,14 @@ export const StyledNewsLetter = styled.div`
       align-items: center;
       position: relative;
       padding: 0 2rem;
-      h1 {
+      h3 {
         text-transform: uppercase;
         letter-spacing: 1.5px;
         position: absolute;
         top: 10%;
       }
       p {
-        padding: 0 4rem;
+        padding: 0 2rem;
         line-height: 1.5;
       }
       .submit {

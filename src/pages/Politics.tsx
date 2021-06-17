@@ -7,7 +7,7 @@ const Politics = () => {
 
   useEffect(() => {
     const getArticles = async () => {
-      const response = await fetchArticles("politics");
+      const response = await fetchArticles("insider");
       setArticles(response);
     };
     getArticles();

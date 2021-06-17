@@ -13,6 +13,7 @@ const Newsletter = () => {
   const toggleClick = () => {
     setClicked((prev) => !prev);
   };
+  const handleClick = () => {};
 
   return (
     <StyledNewsLetter>
@@ -22,7 +23,7 @@ const Newsletter = () => {
             <button className="close-btn" onClick={toggleClick}>
               &times;
             </button>
-            <h1>Sign up &amp; get 10% off</h1>
+            <h3>Sign up &amp; get 10% off</h3>
             <p>
               Subscribe to our newsletters now and stay up-to-date with latest
               news, books and exclusive offers.

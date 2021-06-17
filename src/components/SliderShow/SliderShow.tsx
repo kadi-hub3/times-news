@@ -19,7 +19,7 @@ const SliderShow = () => {
     <SwiperStyle>
       <Swiper
         slidesPerView={4}
-        spaceBetween={40}
+        spaceBetween={20}
         grabCursor={true}
         loop
         autoplay
@@ -46,7 +46,12 @@ const SliderShow = () => {
         {articles.map((article: any, id: any) => {
           return (
             <SwiperSlide key={id}>
-              <a href={article.url} target="_blank" rel="noreferrer" key={id}>
+              <a
+                href={article.url}
+                target="_blank"
+                rel="noreferrer"
+                className="slide-container"
+              >
                 <ETSidebar
                   title={article.title}
                   author={article.author}

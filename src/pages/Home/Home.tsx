@@ -14,7 +14,7 @@ const Home = () => {
     const getArticles = async () => {
       const response = await fetchArticles("home");
       const techResponse = await fetchArticles("arts");
-      const etResponse = await fetchArticles("politics");
+      const etResponse = await fetchArticles("food");
       setArticles(response);
       setTechArticles(techResponse);
       setETArticles(etResponse);
@@ -38,7 +38,6 @@ const Home = () => {
                     author={article.author}
                     description={article.abstract}
                     authorImg={article.image}
-                    authorProfession="Reporter"
                   />
                 </a>
               );

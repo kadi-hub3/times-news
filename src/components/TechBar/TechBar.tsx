@@ -6,7 +6,6 @@ type Props = {
   author: string;
   description: string;
   authorImg: string;
-  authorProfession: string;
 };
 
 const TechBar: React.FC<Props> = ({
@@ -14,7 +13,6 @@ const TechBar: React.FC<Props> = ({
   description,
   author,
   authorImg,
-  authorProfession,
 }) => {
   return (
     <StyledSidebar>
@@ -25,7 +23,6 @@ const TechBar: React.FC<Props> = ({
           <img src={authorImg} alt="author's" />
           <div>
             <h5>{author}</h5>
-            <h6>{authorProfession}</h6>
           </div>
         </div>
       </div>

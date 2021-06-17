@@ -61,7 +61,7 @@ const Header = () => {
             travel
           </NavLink>
           <NavLink to="/times-news/tech" activeClassName="active">
-            technology
+            fashion
           </NavLink>
         </div>
       </div>
