@@ -12,7 +12,7 @@ export const StyledArticle = styled.div`
     margin: 1rem 1rem;
     line-height: 1.75;
     font-family: serif;
-    width: 50vw;
+    width: 90vw;
     border-bottom: 2px solid gray;
 
     img {
@@ -37,9 +37,9 @@ export const StyledArticle = styled.div`
     }
   }
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     .news-article {
-      width: 90vw;
+      width: 45vw;
     }
   }
 `;

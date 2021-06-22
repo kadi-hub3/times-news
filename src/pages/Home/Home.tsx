@@ -1,36 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import Headline from "../../components/Headline/Headline";
 import TechSidebar from "../../components/TechBar/TechBar";
 import ETSidebar from "../../components/ETbar/ETbar";
 import Swiper from "../../components/SliderShow/SliderShow";
-import { fetchArticles } from "../../API";
 import { GlobalStyle } from "./Home.styles";
+import { NewsContext } from "../../Context";
+
 const Home = () => {
-  const [articles, setArticles] = useState<any[]>([]);
-  const [techArticles, setTechArticles] = useState<any[]>([]);
-  const [etArticles, setETArticles] = useState<any[]>([]);
-
-  useEffect(() => {
-    const getArticles = async () => {
-      const response = await fetchArticles("home");
-      const techResponse = await fetchArticles("arts");
-      const etResponse = await fetchArticles("food");
-      setArticles(response);
-      setTechArticles(techResponse);
-      setETArticles(etResponse);
-    };
-
-    getArticles();
-  }, []);
+  const { articles, techArticles, etArticles } = useContext(NewsContext);
 
   return (
     <>
       <GlobalStyle />
-      <Swiper />
       <main className="app">
+        <Swiper />
         <div className="sections">
           <section>
-            {techArticles.map((article, id) => {
+            {techArticles.map((article: any, id: any) => {
               return (
                 <a href={article.url} target="_blank" rel="noreferrer" key={id}>
                   <TechSidebar
@@ -44,7 +30,7 @@ const Home = () => {
             })}
           </section>
           <section>
-            {articles.map((article, id) => {
+            {articles.map((article: any, id: any) => {
               return (
                 <a
                   href={article.url}
@@ -66,7 +52,7 @@ const Home = () => {
             })}
           </section>
           <section>
-            {etArticles.map((article, id) => {
+            {etArticles.map((article: any, id: any) => {
               return (
                 <a href={article.url} target="_blank" rel="noreferrer" key={id}>
                   <ETSidebar

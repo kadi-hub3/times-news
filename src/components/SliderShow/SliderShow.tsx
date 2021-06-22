@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { fetchArticles } from "../../API";
-import ETSidebar from "../ETbar/ETbar";
+import { fetchArticles, Category } from "../../API";
 import { SwiperStyle } from "./SliderShow.styles";
 const SliderShow = () => {
   SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -10,7 +9,7 @@ const SliderShow = () => {
 
   useEffect(() => {
     const getArticles = async () => {
-      const response = await fetchArticles("science");
+      const response = await fetchArticles(Category.Science);
       setArticles(response);
     };
     getArticles();
@@ -52,11 +51,9 @@ const SliderShow = () => {
                 rel="noreferrer"
                 className="slide-container"
               >
-                <ETSidebar
-                  title={article.title}
-                  author={article.author}
-                  image={article.image}
-                />
+                <img src={article.image} alt="article-img" />
+                <h3>{article.title}</h3>
+                <h6>{article.author}</h6>
               </a>
             </SwiperSlide>
           );

@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const StyledBar = styled.div`
   .ET-bar {
     width: 22vw;
-    margin 2rem;
+    margin 2rem 0 ;
+    margin-right:1rem;
     line-height:1.5;
     h3{
         line-height: 1.25;

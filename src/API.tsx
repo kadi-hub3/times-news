@@ -3,14 +3,48 @@ const url = process.env.REACT_APP_URL;
 const weatherKey = process.env.REACT_APP_API_WEATHER_KEY;
 const ipKey = process.env.REACT_APP_IP_KEY;
 
-export const fetchArticles = async (section: string) => {
+export enum Category {
+  Home = "home",
+  Tech = "technology",
+  Arts = "arts",
+  Politics = "politics",
+  ET = "magazine",
+  Fashion = "fashion",
+  Food = "food",
+  Science = "science",
+  Travel = "travel",
+  Health = "health",
+  US = "us",
+  WW = "international",
+  SundayReview = "sundayreview",
+}
+
+export type Article = {
+  title: string;
+  abstract: string;
+  author: string;
+  section: string;
+  url: string;
+  image: string;
+  [key: string]: any;
+};
+
+export type SearchedArticle = {
+  title: string;
+  abstract: string;
+  url: string;
+  image: string;
+  [key: string]: any;
+};
+
+export const fetchArticles = async (category: Category) => {
   try {
-    const response = await fetch(`${url}/${section}.json?api-key=${key}`);
+    const response = await fetch(`${url}/${category}.json?api-key=${key}`);
 
     if (response.ok) {
       const jsonRes = await response.json();
       const articles = await jsonRes.results;
-      return articles.map((article: any) => {
+      return articles.map((article: Article) => {
         return {
           title: article.title,
           abstract: article.abstract,
@@ -34,7 +68,7 @@ export const fetchSpecificArticles = async (query: string) => {
       const jsonRes = await response.json();
       const queryArticles = jsonRes.response.docs;
       console.log(queryArticles);
-      return queryArticles.map((article: any) => {
+      return queryArticles.map((article: SearchedArticle) => {
         return {
           title: article.headline.main,
           abstract: article.abstract,
@@ -49,7 +83,7 @@ export const fetchSpecificArticles = async (query: string) => {
   }
 };
 export const getCurrentDate = () => {
-  const dayNames = [
+  const dayNames: string[] = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -58,7 +92,7 @@ export const getCurrentDate = () => {
     "Friday",
     "Saturday",
   ];
-  const monthNames = [
+  const monthNames: string[] = [
     "January",
     "February",
     "March",

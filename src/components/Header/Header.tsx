@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { StyledHeader } from "./Header.styles";
 import { NavLink } from "react-router-dom";
-import { getCurrentDate } from "../../API";
+import Headline from "../Headline/Headline";
+import { getCurrentDate, Category, fetchArticles } from "../../API";
 import WeatherIcon from "../WeatherApp/Weather";
 import SearchBar from "../SearchBar/SearchBar";
 
 const Header = () => {
   const [date, setDate] = useState("");
+  const [articles, setArticles] = useState<any>([]);
 
   useEffect(() => {
     const getDate = async () => {

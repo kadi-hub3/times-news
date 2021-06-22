@@ -12,4 +12,11 @@ export const SwiperStyle = styled.div`
   .swiper-button-prev:hover {
     color: #fff;
   }
+
+  .slide-container {
+    img {
+      width: 100%;
+      height: 28vh;
+    }
+  }
 `;

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Headline from "../components/Headline/Headline";
-import { fetchArticles } from "../API";
+import { fetchArticles, Category } from "../API";
 
 const Travel = () => {
   const [articles, setArticles] = useState<any[]>([]);
 
   useEffect(() => {
     const getArticles = async () => {
-      const response = await fetchArticles("travel");
+      const response = await fetchArticles(Category.Travel);
       setArticles(response);
     };
     getArticles();
