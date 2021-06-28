@@ -8,7 +8,6 @@ import SearchBar from "../SearchBar/SearchBar";
 
 const Header = () => {
   const [date, setDate] = useState("");
-  const [articles, setArticles] = useState<any>([]);
 
   useEffect(() => {
     const getDate = async () => {

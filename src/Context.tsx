@@ -4,7 +4,7 @@ import { fetchArticles, Article, Category } from "./API";
 export const NewsContext: any = React.createContext({});
 
 const NewsProvider = ({ children }: any) => {
-  const [articles, setArticles] = useState<any[]>([]);
+  const [articles, setArticles] = useState<Article[]>([]);
   const [techArticles, setTechArticles] = useState<any[]>([]);
   const [etArticles, setETArticles] = useState<any[]>([]);
 
