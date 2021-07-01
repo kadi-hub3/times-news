@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { StyledHeader } from "./Header.styles";
 import { NavLink } from "react-router-dom";
-import Headline from "../Headline/Headline";
-import { getCurrentDate, Category, fetchArticles } from "../../API";
+import { getCurrentDate } from "../../API";
 import WeatherIcon from "../WeatherApp/Weather";
 import SearchBar from "../SearchBar/SearchBar";
 
@@ -35,7 +34,7 @@ const Header = () => {
         <div className="title">
           <h4>{date}</h4>
           <NavLink to="/times-news">
-            <h1>THE LA TIMES</h1>
+            <h1>the la times</h1>
           </NavLink>
           <h4>
             <WeatherIcon />

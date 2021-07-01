@@ -24,7 +24,7 @@ export const StyledHeader = styled.div`
   h1 {
     text-align: center;
     padding: 2rem 0;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-family: "Yeseva One", cursive;
     letter-spacing: 5px;
   }
