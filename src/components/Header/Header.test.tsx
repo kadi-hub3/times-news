@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import Header from "./Header";
 
 describe("renders proper header ", () => {
@@ -10,7 +10,7 @@ describe("renders proper header ", () => {
   });
 
   it("should render proper list categories", () => {
-    const component = shallow(<Header />);
+    const component = shallow(<Header />).dive();
     const categories = component.find(".categories").getElements();
     const categoriesLength = component.find(".categories").children().length;
     expect(categories).toBeDefined();

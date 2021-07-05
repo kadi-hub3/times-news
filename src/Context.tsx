@@ -10,7 +10,7 @@ const NewsProvider = ({ children }: any) => {
 
   useEffect(() => {
     const getArticles = async () => {
-      const response = await fetchArticles(Category.Home);
+      const response = await fetchArticles(Category.Politics);
       const techResponse = await fetchArticles(Category.Arts);
       const etResponse = await fetchArticles(Category.Food);
       setArticles(response);

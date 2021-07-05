@@ -44,7 +44,7 @@ export const fetchArticles = async (category: Category) => {
     if (response.ok) {
       const jsonRes = await response.json();
       const articles = await jsonRes.results;
-      return articles.map((article: Article) => {
+      const article = articles.map((article: Article) => {
         return {
           title: article.title,
           abstract: article.abstract,
@@ -54,6 +54,8 @@ export const fetchArticles = async (category: Category) => {
           image: article.multimedia[0].url,
         };
       });
+      console.log(article);
+      return article;
     }
   } catch (err) {
     console.log(err);

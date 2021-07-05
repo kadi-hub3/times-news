@@ -18,6 +18,7 @@ import NewsProvider from "./Context";
 import "./App.css";
 
 function App() {
+  //add a basename
   return (
     <>
       <Header />

@@ -13,7 +13,6 @@ const Newsletter = () => {
   const toggleClick = () => {
     setClicked((prev) => !prev);
   };
-  const handleClick = () => {};
 
   return (
     <StyledNewsLetter>
