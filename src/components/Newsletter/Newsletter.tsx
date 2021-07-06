@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { StyledNewsLetter } from "./Newsletter.styles";
 
 const Newsletter = () => {
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(true);
 
   useEffect(() => {
     const interval = setTimeout(() => {
-      setClicked(true);
+      setClicked(false);
     }, 10000);
   }, []);
 
@@ -16,7 +16,7 @@ const Newsletter = () => {
 
   return (
     <StyledNewsLetter>
-      {clicked && (
+      {!clicked && (
         <div className="modal">
           <div className="modal-newsletter">
             <button className="close-btn" onClick={toggleClick}>

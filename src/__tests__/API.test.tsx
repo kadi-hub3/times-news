@@ -10,6 +10,7 @@ describe("Get API calls properly", () => {
   //Needs Mock or Spy tobe called
   it("should fetch articles data", async () => {
     const data = await fetchArticles(Category.ET);
+    // expect(data).toMatchSnapshot();
     // expect(data).toBeDefined();
     // expect(data[0].title).toBeDefined();
   });
