@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledSidebar = styled.div`
   div {
     width: 25vw;
-    margin: 2rem 1rem;
+    margin: 2rem 0.2rem;
     padding: 0 0.5rem;
     h1 {
       text-align: left;
@@ -20,8 +20,7 @@ export const StyledSidebar = styled.div`
       display: flex;
       margin: 1rem;
       img {
-        width: 5rem;
-        height: 3rem;
+        aspect-ratio: attr(width) / attr(height);
         border-radius: 50%;
         margin-right: 0.5rem;
       }

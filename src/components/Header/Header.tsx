@@ -21,19 +21,19 @@ const Header = () => {
     <StyledHeader>
       <div className="header">
         <div className="lingo">
-          <NavLink to="/times-news/us" activeClassName="active">
+          <NavLink to="/us" activeClassName="active">
             U.S.
           </NavLink>
-          <NavLink to="/times-news/world" activeClassName="active">
+          <NavLink to="/world" activeClassName="active">
             INTERNATIONAL
           </NavLink>
-          <NavLink to="/times-news/sundayreview" activeClassName="active">
+          <NavLink to="/sundayreview" activeClassName="active">
             Sunday Review
           </NavLink>
         </div>
         <div className="title">
           <h4>{date}</h4>
-          <NavLink to="/times-news">
+          <NavLink to="/">
             <h1>the la times</h1>
           </NavLink>
           <h4>
@@ -42,26 +42,26 @@ const Header = () => {
         </div>
         <SearchBar />
         <div className="categories">
-          <NavLink to="/times-news/politics" activeClassName="active">
+          <NavLink to="/politics" activeClassName="active">
             politics
           </NavLink>
-          <NavLink to="/times-news/et" activeClassName="active">
+          <NavLink to="/et" activeClassName="active">
             entertainment
           </NavLink>
-          <NavLink to="/times-news/arts" activeClassName="active">
+          <NavLink to="/arts" activeClassName="active">
             arts
           </NavLink>
-          <NavLink to="/times-news/health" activeClassName="active">
+          <NavLink to="/health" activeClassName="active">
             health
           </NavLink>
-          <NavLink to="/times-news/science" activeClassName="active">
+          <NavLink to="/science" activeClassName="active">
             science
           </NavLink>
-          <NavLink to="/times-news/travel" activeClassName="active">
+          <NavLink to="/travel" activeClassName="active">
             travel
           </NavLink>
-          <NavLink to="/times-news/tech" activeClassName="active">
-            fashion
+          <NavLink to="/tech" activeClassName="active">
+            tech
           </NavLink>
         </div>
       </div>

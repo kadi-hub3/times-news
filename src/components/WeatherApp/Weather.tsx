@@ -27,7 +27,7 @@ const Weather = () => {
     getWeather();
   }, [city]);
 
-  const iconapi = `http://openweathermap.org/img/w/${icon}.png`;
+  const iconapi = `https://openweathermap.org/img/w/${icon}.png`;
   return (
     <StyledWeather>
       <div className="weather">

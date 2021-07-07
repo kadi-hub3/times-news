@@ -19,7 +19,11 @@ const Newsletter = () => {
       {!clicked && (
         <div className="modal">
           <div className="modal-newsletter">
-            <button className="close-btn" onClick={toggleClick}>
+            <button
+              className="close-btn"
+              onClick={toggleClick}
+              aria-label="click to close newsletter"
+            >
               &times;
             </button>
             <h3>Sign up &amp; get 10% off</h3>
@@ -32,7 +36,9 @@ const Newsletter = () => {
               name="email"
               placeholder="Subscribe by email ..."
             />
-            <button className="submit">subscribe</button>
+            <button className="submit" aria-label="submit mail">
+              subscribe
+            </button>
           </div>
         </div>
       )}

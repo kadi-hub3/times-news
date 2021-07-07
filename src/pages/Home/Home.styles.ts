@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 main {
-    padding: 1rem 2rem;
+    padding: 1rem;
   }
 
 .sections {

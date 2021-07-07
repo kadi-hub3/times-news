@@ -15,8 +15,7 @@ export const SwiperStyle = styled.div`
 
   .slide-container {
     img {
-      width: 100%;
-      height: 28vh;
+      aspect-ratio: attr(width) / attr(height);
     }
   }
 `;

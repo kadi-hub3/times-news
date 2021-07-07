@@ -5,6 +5,10 @@
   background: rgb(246, 242, 235);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 p {
   font-family: Georgia, "Times New Roman", Times, serif;
 }

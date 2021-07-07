@@ -10,7 +10,7 @@ const ETbar: React.FC<Props> = ({ title, image, author }) => {
   return (
     <StyledBar>
       <section className="ET-bar">
-        <img src={image} alt="article-img" />
+        <img src={image} width="280" height="170" alt="article-img" />
         <h3>{title}</h3>
         <h6>{author}</h6>
       </section>

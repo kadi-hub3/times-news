@@ -32,7 +32,7 @@ const SearchBar = () => {
             onChange={handleChange}
             placeholder="Type any keyword"
           />
-          <button onClick={getData} type="button">
+          <button onClick={getData} type="button" aria-label="search article">
             <FaSearch />
           </button>
         </div>

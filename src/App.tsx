@@ -25,21 +25,17 @@ function App() {
       <Newsletter />
       <NewsProvider>
         <Switch>
-          <Route exact path="/times-news/" component={Home} />
-          <Route exact path="/times-news/us" component={US} />
-          <Route exact path="/times-news/world" component={World} />
-          <Route
-            exact
-            path="/times-news/sundayreview"
-            component={SundayReview}
-          />
-          <Route exact path="/times-news/health" component={Health} />
-          <Route exact path="/times-news/tech" component={Tech} />
-          <Route exact path="/times-news/science" component={Science} />
-          <Route exact path="/times-news/travel" component={Travel} />
-          <Route exact path="/times-news/et" component={ET} />
-          <Route exact path="/times-news/politics" component={Politics} />
-          <Route exact path="/times-news/arts" component={Arts} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/us" component={US} />
+          <Route exact path="/world" component={World} />
+          <Route exact path="/sundayreview" component={SundayReview} />
+          <Route exact path="/health" component={Health} />
+          <Route exact path="/tech" component={Tech} />
+          <Route exact path="/science" component={Science} />
+          <Route exact path="/travel" component={Travel} />
+          <Route exact path="/et" component={ET} />
+          <Route exact path="/politics" component={Politics} />
+          <Route exact path="/arts" component={Arts} />
         </Switch>
       </NewsProvider>
       <Footer />

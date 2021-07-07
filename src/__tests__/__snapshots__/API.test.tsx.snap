@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Get API calls properly should fetch articles data 1`] = `undefined`;

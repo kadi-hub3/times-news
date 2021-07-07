@@ -4,29 +4,25 @@ export const StyledArticle = styled.div`
   display: flex;
   justify-content: center;
   .news-article {
-    padding: 0rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem 1rem;
+    margin: 0.7rem;
     line-height: 1.75;
     font-family: serif;
-    width: 90vw;
+    // width: 90vw;
     border-bottom: 2px solid gray;
 
     img {
-      width: 100%;
-      height: 45vh;
-      padding-bottom: 1rem;
+      aspect-ratio: attr(width) / attr(height);
     }
     .author {
       display: flex;
       justify-content: start;
       margin: 1rem;
       img {
-        width: 5rem;
-        height: 5rem;
+        aspect-ratio: attr(width) / attr(height);
         border-radius: 50%;
         margin: 0 0.5rem;
       }
@@ -39,7 +35,7 @@ export const StyledArticle = styled.div`
 
   @media only screen and (min-width: 1024px) {
     .news-article {
-      width: 45vw;
+      // width: 40vw;
     }
   }
 `;

@@ -51,7 +51,12 @@ const SliderShow = () => {
                 rel="noreferrer"
                 className="slide-container"
               >
-                <img src={article.image} alt="article-img" />
+                <img
+                  src={article.image}
+                  width="380"
+                  height="215"
+                  alt="article-img"
+                />
                 <h3>{article.title}</h3>
                 <h6>{article.author}</h6>
               </a>

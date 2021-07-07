@@ -20,7 +20,7 @@ const TechBar: React.FC<Props> = ({
         <h1>{title}</h1>
         <p>{description}</p>
         <div className="author">
-          <img src={authorImg} alt="author's" />
+          <img src={authorImg} width="80" height="45" alt="author's" />
           <div>
             <h5>{author}</h5>
           </div>
