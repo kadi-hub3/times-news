@@ -26,15 +26,15 @@ const SliderShow = () => {
         breakpoints={{
           350: {
             width: 350,
-            slidesPerView: 1,
+            slidesPerView: 2,
           },
           640: {
             width: 640,
-            slidesPerView: 1,
+            slidesPerView: 2,
           },
           768: {
             width: 768,
-            slidesPerView: 2,
+            slidesPerView: 3,
           },
           1024: {
             width: 1024,

@@ -4,8 +4,11 @@ export const StyledBar = styled.div`
   .ET-bar {
     margin 2rem 0.4rem ;
     line-height:1.5;
+    // aspect-ratio: attr(width) / attr(height);
+
     h3{
         line-height: 1.25;
+
     }
     img {
       aspect-ratio: attr(width) / attr(height);
