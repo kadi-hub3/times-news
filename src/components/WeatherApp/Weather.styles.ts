@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledWeather = styled.div`
   .weather {
     display: flex;
+    padding-bottom: 1rem;
   }
   .weather-temp div {
     display: flex;

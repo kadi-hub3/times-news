@@ -1,13 +1,19 @@
 import styled from "styled-components";
 
 export const StyledSidebar = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+
   div {
     width: 25vw;
-    margin: 2rem 0.2rem;
-    padding: 0 0.5rem;
+    padding: 1.2rem;
+    line-height: 1.5;
+
     h1 {
       text-align: left;
-      line-height: 1.5;
       padding-bottom: 0.5rem;
       text-decoration: none;
       font-family: serif;
@@ -18,11 +24,11 @@ export const StyledSidebar = styled.div`
     }
     .author {
       display: flex;
-      margin: 1rem;
       img {
         aspect-ratio: attr(width) / attr(height);
         border-radius: 50%;
         margin-right: 0.5rem;
+        width: 3vw;
       }
       div {
         margin: 0.2rem;
@@ -31,9 +37,8 @@ export const StyledSidebar = styled.div`
     }
   }
 
-  @media only screen and (max-width: 1024px) {
-    div {
-      display: none;
-    }
+  @media only screen and (max-width: 1600px) {
+    width: 500px;
+    display: none;
   }
 `;

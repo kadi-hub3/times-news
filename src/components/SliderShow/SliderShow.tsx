@@ -9,7 +9,7 @@ const SliderShow = () => {
 
   useEffect(() => {
     const getArticles = async () => {
-      const response = await fetchArticles(Category.Science);
+      const response = await fetchArticles(Category.Home);
       setArticles(response);
     };
     getArticles();

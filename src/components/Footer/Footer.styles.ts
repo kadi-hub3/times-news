@@ -12,12 +12,18 @@ export const StyledFooter = styled.div`
     }
     ul {
       display: flex;
-      flex-direction: row;
       list-style: none;
       cursor: pointer;
       li {
         padding: 0 0.7rem;
       }
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    ul {
+      display: flex;
+      flex-direction: column;
     }
   }
 `;

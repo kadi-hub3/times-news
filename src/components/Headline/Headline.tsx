@@ -21,7 +21,13 @@ const Headline: React.FC<Props> = ({
   return (
     <StyledArticle>
       <div className="news-article">
-        <img src={image} width="540" height="303" alt="headline img" />
+        <img
+          src={image}
+          className="main-img"
+          width="800"
+          height="450"
+          alt="headline img"
+        />
         <h2>{title}</h2>
         <span>{description}</span>
         <div className="author">

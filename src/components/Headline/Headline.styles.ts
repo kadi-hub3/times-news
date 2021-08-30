@@ -7,12 +7,13 @@ export const StyledArticle = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 0.7rem;
+    align-items: flex-start;
+    margin: 0.7rem 0;
     line-height: 1.75;
     font-family: serif;
-    // width: 90vw;
     border-bottom: 2px solid gray;
+    width: 800px;
+    padding: 1rem 2rem;
 
     img {
       aspect-ratio: attr(width) / attr(height);
@@ -25,6 +26,7 @@ export const StyledArticle = styled.div`
         aspect-ratio: attr(width) / attr(height);
         border-radius: 50%;
         margin: 0 0.5rem;
+        width: 3vw;
       }
       div {
         margin: 0.2rem;
@@ -33,9 +35,16 @@ export const StyledArticle = styled.div`
     }
   }
 
-  @media only screen and (min-width: 1024px) {
-    .news-article {
-      // width: 40vw;
+  @media only screen and (max-width: 768px) {
+    .news-article,
+    img {
+      width: 90vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .main-img {
+      height: 50vh;
     }
   }
 `;

@@ -39,4 +39,17 @@ export const StyledHeader = styled.div`
   .active {
     font-weight: bolder;
   }
+
+  @media only screen and (max-width: 768px) {
+    .title {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 `;

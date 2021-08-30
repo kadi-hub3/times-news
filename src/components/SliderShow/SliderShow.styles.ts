@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const SwiperStyle = styled.div`
   padding: 1rem;
+  width: 95vw;
   margin-top: 1rem;
   .swiper-button-next,
   .swiper-button-prev {
-    color: black;
+    color: orange;
     background: transparent;
   }
   .swiper-button-next:hover,
